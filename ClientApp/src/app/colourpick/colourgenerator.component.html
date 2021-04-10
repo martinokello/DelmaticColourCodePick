@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+  <h1>Colour Generator Configure And Run</h1>
+
+  <form #f2="ngForm" (ngSubmit)="f2.form.valid">
+    <div #colorgeneratorView class="container">
+      <div class="row" style="margin-top:35px !important;">
+        <div class="col-lg-6" style="border-right:solid thin gray !important;">
+          <h5 style="color:blue !important;">Add colours to use from dropdown</h5>
+          <div class="form-group">
+            <p sstyle="margin-top:40px !important">
+              <select #coloursToUse class="box-shadow" style="padding:10px 5px !important;">
+                <option>Select Colour To Add To The Diagram</option>
+              </select>
+            </p>
+            <p>
+              <button #btnAddColour class="btn-primary" (click)="btnAddColourToChart()" style="padding:10px 5px !important;">Add Colour</button>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5 style="color:blue !important;">Click on a light colour on the Map</h5>
+          <canvas id="colourGraph"></canvas>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </form>
+</div>
